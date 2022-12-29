@@ -4,9 +4,19 @@
 	box-sizing: border-box;
 }
 
+:root {
+  --dark: #22223b;
+  --less-dark: #4a4e69;
+  --gray: #9a8c98;
+  --sweet: #c9ada7;
+  --light: #f2e9e4;
+}
+
+
 body {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
+  color: var(--dark);
 }
 
 *:focus {
@@ -19,7 +29,7 @@ a {
 
 .page {
 	min-height: 100vh;
-	background-color: #f2f5f9;
+	background-color: var(--light);
 }
 
 aside {
@@ -30,14 +40,15 @@ aside {
 		5px 0px 80px rgba(0, 0, 0, 0.05);
 }
 
-aside > h3 {
-}
+/* aside > h3 {
+} */
 
 aside > h3::before {
 	content: "";
 	width: 60%;
 	height: 2px;
-	background-color: black;
+  background-color: var(--gray);
+
 	position: absolute;
 	left: 20%;
 	bottom: -8px;
@@ -48,7 +59,7 @@ aside > h3::after {
 	position: absolute;
 	width: 18px;
 	height: 18px;
-	background: black;
+	background-color: var(--less-dark);
 	border-radius: 50%;
 	bottom: -17px;
 	left: 50%;
@@ -58,7 +69,7 @@ aside > h3::after {
 
 aside ul li a:hover,
 aside ul li a.active {
-	background-color: #f6f6f6;
+	background-color: var(--light);
 }
 
 aside ul li a {
@@ -78,7 +89,7 @@ aside ul li a span {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		background-color: dodgerblue;
+		background-color: var(--dark);
 		color: white;
 		width: 20px;
 		height: 20px;
@@ -93,6 +104,8 @@ aside ul li a span {
 		font-size: 13px;
 		margin-bottom: 15px;
 	}
+
+
 	aside ul li span {
 		display: none;
 	}
@@ -104,3 +117,64 @@ aside ul li a span {
 		justify-content: center;
 	}
 }
+
+/* Start Main + Header */
+main {
+  overflow: hidden;
+}
+
+header .search::before {
+  font-family: var(--fa-style-family-classic);
+  content: '\f002';
+  font-weight: 900;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--sweet);
+}
+
+header .search input {
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  width: 130px;
+  padding-left: 30px;
+  margin-left: 5px;
+  font-size: inherit;
+  color: inherit;
+  transition: 0.3s width;
+}
+header .search input:focus {
+  border-color: var(--sweet);
+  width: 200px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;}
+
+header .search input:focus::placeholder {
+  opacity: 0;
+}
+
+header .icons .notif::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--sweet);
+  border-radius: 5px;
+}
+
+i {
+  color: var(--less-dark);
+}
+
+header .icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+/* Start Main + Header */

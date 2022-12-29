@@ -13,6 +13,9 @@
 .p-10 {
 	padding: 10px;
 }
+.p-15 {
+	padding: 10px;
+}
 .p-0 {
 	padding: 0;
 }
@@ -24,6 +27,10 @@
 }
 .ml-10 {
 	margin-left: 10px;
+}
+
+.w-full {
+  width: 100%;
 }
 /* End Padding + Margin */
 /* Start Color */
@@ -58,3 +65,11 @@
 	border-radius: 6px;
 }
 /* End Border */
+
+/* Start Components */
+.between-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* End Components */
